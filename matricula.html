@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrícula</title>
+</head>
+<body>
+    <h1>
+        Matrícula do Aluno
+    </h1>
+
+    <form>
+        <fieldset>
+            <legend>
+                Dados Pessoais
+            </legend>
+
+            <label for="nome">
+                Nome:
+            </label>
+            <input type="text" id="nome" name="Nome" required placeholder="nome" />
+            <br />
+            <br />
+
+            <label for="cpf">
+                CPF:
+            </label>
+            <input type="text" name="cpf" id="cpf" pattern="(\d{3}\.\d{3}\.\d{3}-\d{2})|(\d{11})" placeholder="XXX.XXX.XXX-XX" />
+            <br />
+            <br />
+
+            <label for="dt">
+                Data de Nascimento:
+            </label>
+            <input type="date" name="dt" id="dt" required />
+            <br />
+            <br />
+
+            <label for="sexo">
+                Sexo:
+            </label>
+            <input type="radio" name="sexo" value="Feminino" />
+            <label for="fem">Feminino</label>
+            <input type="radio" name="sexo" value="Masculino" checked />
+            <label for="masc">Masculino</label>
+            <br />
+            <br />
+
+            <label for="cidade">
+                Cidade:
+            </label>
+            <input type="text" id="cidade" name="cidade" required />
+            <label for="estado">
+                Estado:
+            </label>
+            <select name="states" id="states">
+                <optgroup label="Sudeste">
+                    <option value="Sao Paulo">SP</option>
+                    <option value="Rio de Janeiro">RJ</option>
+                    <option value="Espirito Santo">ES</option>
+                    <option value="Minas Gerais">MG</option>
+                </optgroup>
+                    <optgroup label="Centro-Oeste">
+                    <option value="Distrito Federal">DF</option>
+                    <option value="Goias">GO</option>
+                    <option value="Mato Grosso">MT</option>
+                    <option value="Mato Grosso do Sul">MS</option>
+                </optgroup>
+                <optgroup label="Norte">
+                    <option value="Acre">AC</option>
+                    <option value="Amapa">AP</option>
+                    <option value="Amazonas">AM</option>
+                    <option value="Para">PA</option>
+                    <option value="Rondonia">RO</option>
+                    <option value="Roraima">RR</option>
+                    <option value="Tocantins">TO</option>
+                </optgroup>
+                <optgroup label="Nordeste">
+                    <option value="Maranhao">MA</option>
+                    <option value="Piaui">PI</option>
+                    <option value="RioNorte">RN</option>
+                    <option value="Ceara">CE</option>
+                    <option value="Paraiba">PB</option>
+                    <option value="Bahia">BA</option>
+                    <option value="Pernambuco">PE</option>
+                    <option value="Alagoas">AL</option>
+                    <option value="Sergipe">SE</option>
+                </optgroup>
+            </select>
+            <br />
+            <br />
+        </fieldset>
+        <fieldset>
+            <legend>
+                Dados da Matrícula
+            </legend>
+            <label for="curso">
+                Curso:
+            </label>
+            <br />
+            <input type="radio" name="curso" value="ADS" checked/>
+            <label for="ads">Análise e Desenvolvimento de Sistemas</label>
+            <input type="radio" name="curso" value="EM"  />
+            <label for="em">Engenharia Mecânica</label>
+            <input type="radio" name="curso" value="TSI"  />
+            <label for="tsi">Sistemas para Internet</label>
+            <br />
+            <br />
+
+            <label for="optativa">
+                Disciplinas Optativas:
+            </label>
+            <br />
+            <input type="checkbox" name="op" value="pr"/>
+            <label for="pr">Programação para Robos</label>
+            <input type="checkbox" name="op" value="di"/>
+            <label for="di">Desenvolvimento de Inteligências Artificiais</label>
+            <br />
+            <input type="checkbox" name="op" value="mc"/>
+            <label for="mc">Modelagem Computacional</label>
+            <input type="checkbox" name="op" value="ai"/>
+            <label for="ai">Ambientes Isolados: Desenvolvimento com Docker</label>
+            <br />
+            <br />
+
+            <label for="sugestoes">
+                Sugestões de disciplinas futuras:
+            </label>
+            <br />
+            <textarea id="sugestoes" name="sugestoes" rows="4" cols="50"></textarea>
+            <br />
+            <br />
+        </fieldset>
+        <br />
+        <br />
+        <center><input type="submit" value="Enviar" /></center>
+    </form>
+</body>
+</html>
